@@ -1,0 +1,47 @@
+.clock {
+  font-size: clamp(20px, 20vw, 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.navbar {
+  position: relative;
+}
+button {
+  cursor: pointer;
+  background: transparent;;
+  border: none;
+  font-size: 20px;
+}
+.navbar .toggle {
+  position: fixed;
+  left: 30px;
+  top: 40px;
+  cursor: pointer;
+  background: transparent;;
+  border: none;
+}
+.menu-nav {
+  list-style: none;
+  position: absolute;
+  background: #fff;
+  left: 30px;
+  top: 40px;
+  width: 0;
+  overflow: hidden;
+  max-width: 290px;
+  z-index: 9;
+  font-size: 18px;
+  box-shadow: 0 10px 15px -3px rgb(46 41 51 / 8%), 0 4px 6px -2px rgb(71 63 79 / 16%);
+  transform: translateX(-100px);
+
+}
+.menu-nav.show-menu {
+  width: 100%;
+  transform: translateX(0px);
+}
+.menu-nav li {
+  display: block;
+  padding: 1rem;
+}

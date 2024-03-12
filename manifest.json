@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Test",
+  "version": "1.0.0",
+  "description": "A basic example extension with only required keys",
+  "action": {
+    "default_title": "Click to open panel"
+  },
+  "side_panel": {
+    "default_path": "index.html",
+    "openPanelOnActionClick": true
+  },
+  "permissions": ["sidePanel", "tabs", "scripting", "storage", "contextMenus"]
+}
+    
