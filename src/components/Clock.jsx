@@ -9,12 +9,10 @@ function Clock() {
   const [ctime, setTime] = useState(clock);
  
     useEffect(() => {
-        //Implementing the setInterval method
         const interval = setInterval(() => {
             setTime(clock());
         }, 1000);
- 
-        //Clearing the interval
+
         return () => clearInterval(interval);
     }, [ctime]);
  

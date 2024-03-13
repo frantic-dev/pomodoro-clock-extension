@@ -1,18 +1,49 @@
+// variables
+$option-1: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+$option-2: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+$option-3:  linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+$option-4:  linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+$option-5: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+$option-6: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+$option-7: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%);
+$option-8: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+#bg-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around ;
+  align-items: center;
+}
+
+#inner-container {
+  height: 100vh;
+}
+
 .clock {
   font-size: clamp(20px, 20vw, 80px);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  margin-top: 30vh;
+  margin-bottom: 10vh;
+  color: white;
+  font-weight: 700;
 }
-.navbar {
-  position: relative;
-}
+
 button {
   cursor: pointer;
   background: transparent;;
   border: none;
-  font-size: 20px;
 }
 .navbar .toggle {
   position: fixed;
@@ -27,21 +58,58 @@ button {
   position: absolute;
   background: #fff;
   left: 30px;
-  top: 40px;
+  top: 60px;
   width: 0;
   overflow: hidden;
   max-width: 290px;
   z-index: 9;
-  font-size: 18px;
   box-shadow: 0 10px 15px -3px rgb(46 41 51 / 8%), 0 4px 6px -2px rgb(71 63 79 / 16%);
   transform: translateX(-100px);
 
 }
 .menu-nav.show-menu {
-  width: 100%;
+  width: fit-content;
   transform: translateX(0px);
 }
 .menu-nav li {
   display: block;
-  padding: 1rem;
+  padding: 5px 10px;
+}
+#backgrounds * {
+  border: 1px solid red;
+  width: calc(100vw / 8);
+  aspect-ratio: 1;
+  border-radius: 5px;
+}
+
+#backgrounds {
+  display: grid;
+  grid-template-columns: repeat(4,calc(100vw / 8));
+  gap: 10px;
+  justify-content: space-around;
+  
+}
+.option-1 {
+  background-image: $option-1;
+}
+.option-2 {
+  background-image: $option-2;
+}
+.option-3 {
+  background-image: $option-3;
+}
+.option-4 {
+  background-image: $option-4;
+}
+.option-5 {
+  background-image: $option-5;
+}
+.option-6 {
+  background-image: $option-6;
+}
+.option-7 {
+  background-image: $option-7;
+}
+.option-8 {
+  background-image: $option-8;
 }

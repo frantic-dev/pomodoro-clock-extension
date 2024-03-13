@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import navbarReducer from "./reducers/navbarReducer";
+import bgReducer from "./reducers/bgReducer";
 
 const store = configureStore({
   reducer: {
-    navbar: navbarReducer
+    navbar: navbarReducer, 
+    bg: bgReducer
   }
 })
 

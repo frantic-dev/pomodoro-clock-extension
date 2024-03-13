@@ -1,24 +1,28 @@
 import { useDispatch, useSelector } from 'react-redux'
 import Clock from './components/Clock'
-import Navbar from './components/Settings'
+import Navbar from './components/Navbar'
 import './style/index.scss'
 import { navbarChange } from './reducers/navbarReducer'
+import Backgrounds from './components/Backgrounds'
 
 function App() {
-  const navbarOpen = useSelector(state => state.navbar)
   const dispatch = useDispatch()
+  const bgOption = useSelector(state => state.bg)
+
+  function hideNavbar(e) {
+    const navbar = document.querySelector('.navbar')
+    console.log(e.target)
+    if (!navbar.contains(e.target)) {
+      dispatch(navbarChange(false))
+    }
+  }
   return (
-    <div
-      onClick={e => {
-        const navbar = document.querySelector('.navbar')
-        if (!navbar.contains(e.target)) {
-          dispatch(navbarChange(false))
-          console.log(navbarOpen)
-        }
-      }}
-    >
-      <Navbar />
-      <Clock />
+    <div id='bg-container' className={bgOption}>
+      <div onClick={e => hideNavbar(e)} id='inner-container' >
+        <Navbar />
+        <Clock />
+        <Backgrounds />
+      </div>
     </div>
   )
 }

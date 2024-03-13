@@ -10,7 +10,7 @@ const Navbar = () => {
         className='toggle'
         onClick={() => dispatch(navbarChange(!navbarOpen))}
       >
-        {navbarOpen ? 'close' : 'open'}
+        settings
       </button>
       <ul className={`menu-nav${navbarOpen ? ' show-menu' : ''}`}>
         <li>change background</li>
