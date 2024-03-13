@@ -22,7 +22,7 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: space-around ;
-  align-items: center;
+  align-items: center;;
 }
 
 #inner-container {
@@ -38,12 +38,6 @@ html, body {
   margin-bottom: 10vh;
   color: white;
   font-weight: 700;
-}
-
-button {
-  cursor: pointer;
-  background: transparent;;
-  border: none;
 }
 .navbar .toggle {
   position: fixed;
@@ -74,6 +68,7 @@ button {
 .menu-nav li {
   display: block;
   padding: 5px 10px;
+  cursor: pointer;
 }
 #backgrounds * {
   border: 1px solid red;
@@ -87,7 +82,12 @@ button {
   grid-template-columns: repeat(4,calc(100vw / 8));
   gap: 10px;
   justify-content: space-around;
-  
+}
+.block{
+  display: block;
+}
+.none{
+  display: none;
 }
 .option-1 {
   background-image: $option-1;
@@ -112,4 +112,14 @@ button {
 }
 .option-8 {
   background-image: $option-8;
+}
+#hide-bgs-grid {
+  display: block;
+  margin: 20px auto;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: none;
+  &:hover {
+    filter: brightness(110%);
+  }
 }

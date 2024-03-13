@@ -7,7 +7,7 @@ import Backgrounds from './components/Backgrounds'
 
 function App() {
   const dispatch = useDispatch()
-  const bgOption = useSelector(state => state.bg)
+  const bg = useSelector(state => state.bg)
 
   function hideNavbar(e) {
     const navbar = document.querySelector('.navbar')
@@ -17,7 +17,7 @@ function App() {
     }
   }
   return (
-    <div id='bg-container' className={bgOption}>
+    <div id='bg-container' className={bg.option}>
       <div onClick={e => hideNavbar(e)} id='inner-container' >
         <Navbar />
         <Clock />
