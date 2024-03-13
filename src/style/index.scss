@@ -1,12 +1,12 @@
 // variables
-$option-1: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
-$option-2: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
-$option-3:  linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-$option-4:  linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
-$option-5: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-$option-6: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
-$option-7: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%);
-$option-8: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+$option-1: linear-gradient(#a18cd1 0%, #fbc2eb 100%);
+$option-2: linear-gradient(#ff0844 0%, #ffb199 100%);
+$option-3: linear-gradient(0deg, #f6d365 0%, #fda085 100%);
+$option-4: linear-gradient(0deg, #d5ff75 0%, #84b38a 100%);
+$option-5: linear-gradient(#30cfd0 0%, #8946db 100%);
+$option-6: linear-gradient(#505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%);
+$option-7: linear-gradient(#c79081 0%, #dfa579 100%);
+$option-8: linear-gradient(to top, #48f1d0 0%, #94922e 100%);
 
 *{
   padding: 0;
@@ -15,29 +15,30 @@ $option-8: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 
 html, body {
   min-height: 100vh;
+  font-size: 16px;
 }
 
 #bg-container {
-  height: 100vh;
+  min-height: 70vh;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around ;
-  align-items: center;;
+  justify-content: center ;
+  padding-top: 30vh;
 }
 
-#inner-container {
-  height: 100vh;
-}
 
 .clock {
   font-size: clamp(20px, 20vw, 80px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30vh;
-  margin-bottom: 10vh;
+  text-align: center;
   color: white;
   font-weight: 700;
+  margin-bottom: 40px;
+}
+.toggle {
+  color: white;
+  font-size: 16px;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 .navbar .toggle {
   position: fixed;
@@ -57,8 +58,8 @@ html, body {
   overflow: hidden;
   max-width: 290px;
   z-index: 9;
-  box-shadow: 0 10px 15px -3px rgb(46 41 51 / 8%), 0 4px 6px -2px rgb(71 63 79 / 16%);
   transform: translateX(-100px);
+  border-radius: 3px;
 
 }
 .menu-nav.show-menu {
@@ -71,15 +72,18 @@ html, body {
   cursor: pointer;
 }
 #backgrounds * {
-  border: 1px solid red;
+  border: 1px solid rgb(230, 221, 221);
+  box-shadow: 0 1px 2px rgba(175, 175, 175, 0.616);
   width: calc(100vw / 8);
   aspect-ratio: 1;
   border-radius: 5px;
+  cursor: pointer;
+  max-width: 70px;
+  margin: auto;
 }
-
 #backgrounds {
   display: grid;
-  grid-template-columns: repeat(4,calc(100vw / 8));
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   justify-content: space-around;
 }

@@ -4,13 +4,19 @@ import { bgChange } from '../reducers/bgReducer'
 const Backgrounds = () => {
   const bg = useSelector(state => state.bg)
   const dispatch = useDispatch()
-  console.log(bg.display)
+
+  function getBgOption(e) {
+    // avoid getting div#backgrounds className as background option
+    if (e.target.className !== '') {
+      dispatch(bgChange({ option: e.target.className }))
+    }
+  }
 
   return (
     <div className={`${bg.display}`}>
       <div
         id='backgrounds' 
-        onClick={e => dispatch(bgChange({ option: e.target.className }))}
+        onClick={e => getBgOption(e)}
       >
         <div className='option-1'></div>
         <div className='option-2'></div>
