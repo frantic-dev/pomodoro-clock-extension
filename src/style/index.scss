@@ -4,16 +4,27 @@ $option-2: linear-gradient(#ff0844 0%, #ffb199 100%);
 $option-3: linear-gradient(0deg, #f6d365 0%, #fda085 100%);
 $option-4: linear-gradient(0deg, #d5ff75 0%, #84b38a 100%);
 $option-5: linear-gradient(#30cfd0 0%, #8946db 100%);
-$option-6: linear-gradient(#505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%);
+$option-6: linear-gradient(
+  #505285 0%,
+  #585e92 12%,
+  #65689f 25%,
+  #7474b0 37%,
+  #7e7ebb 50%,
+  #8389c7 62%,
+  #9795d4 75%,
+  #a2a1dc 87%,
+  #b5aee4 100%
+);
 $option-7: linear-gradient(#c79081 0%, #dfa579 100%);
 $option-8: linear-gradient(to top, #48f1d0 0%, #94922e 100%);
 
-*{
+* {
   padding: 0;
   margin: 0;
 }
 
-html, body {
+html,
+body {
   min-height: 100vh;
   font-size: 16px;
 }
@@ -21,12 +32,12 @@ html, body {
 #bg-container {
   min-height: 70vh;
   display: flex;
-  justify-content: center ;
+  justify-content: center;
   padding-top: 30vh;
 }
 
-
-.clock {
+.clock,
+.stopwatch-time {
   font-size: clamp(20px, 20vw, 80px);
   text-align: center;
   color: white;
@@ -45,7 +56,7 @@ html, body {
   left: 30px;
   top: 40px;
   cursor: pointer;
-  background: transparent;;
+  background: transparent;
   border: none;
 }
 .menu-nav {
@@ -60,7 +71,6 @@ html, body {
   z-index: 9;
   transform: translateX(-100px);
   border-radius: 3px;
-
 }
 .menu-nav.show-menu {
   width: fit-content;
@@ -86,11 +96,12 @@ html, body {
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   justify-content: space-around;
+  margin-bottom: 20px;
 }
-.block{
+.block {
   display: block;
 }
-.none{
+.none {
   display: none;
 }
 .option-1 {
@@ -117,13 +128,49 @@ html, body {
 .option-8 {
   background-image: $option-8;
 }
-#hide-bgs-grid {
+#hide-bgs-grid, .stopwatch-button {
   display: block;
-  margin: 20px auto;
+  margin: auto;
   padding: 5px 20px;
   border-radius: 5px;
+  margin-bottom: 20px;
   border: none;
   &:hover {
     filter: brightness(110%);
   }
+}
+#mode-menu {
+  // border: 1px solid red;
+  position: absolute;
+  width: 75px;
+  padding: 0 10px;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  & * {
+    width: 20px;
+    fill: white;
+    cursor: pointer;
+  }
+  #clock-icon {
+    transform: scale(0.95);
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  #stopwatch-icon {
+    transform: scale(1.1);
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  #countdown-timer-icon {
+    transform: scaleX(-1);
+    &:hover {
+      transform: scale(-1.2, 1.2);
+    }
+  }
+}
+.stopwatch-buttons {
+  display: flex;
 }
