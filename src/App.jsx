@@ -5,6 +5,7 @@ import './style/index.scss'
 import Backgrounds from './components/Backgrounds'
 import Stopwatch from './components/Stopwatch'
 import ModeMenu from './components/ModeMenu'
+import CountdownTimer from './components/CountdownTimer'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Navbar />
         <Clock />
         <Stopwatch />
+        <CountdownTimer />
         <Backgrounds />
       </div>
     </div>

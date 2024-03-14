@@ -28,7 +28,7 @@ const Backgrounds = () => {
         <div className='option-8'></div>
       </div>
 
-      <button id='hide-bgs-grid' onClick={()=> dispatch(bgChange({display:'none'}))}>Done</button>
+      <button id='hide-bgs-grid-button' onClick={()=> dispatch(bgChange({display:'none'}))}>Done</button>
     </div>
   )
 }

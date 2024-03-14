@@ -17,7 +17,10 @@ export default function ModeMenu() {
         id='stopwatch-icon'
         onClick={() => dispatch(modeChange('stopwatch'))}
       />
-      <CountdownTimer id='countdown-timer-icon' />
+      <CountdownTimer
+        id='countdown-timer-icon'
+        onClick={() => dispatch(modeChange('countdown'))}
+      />
     </div>
   )
 }

@@ -27,7 +27,7 @@ const Stopwatch = () => {
   return (
     <div className={mode === 'stopwatch' ? 'block' : 'none'}>
       <div className='stopwatch-container'>
-        <p className='stopwatch-time'>
+        <p className='stopwatch-timer'>
           {hours.toString().padStart(2, '0')}:
           {minutes.toString().padStart(2, '0')}:
           {seconds.toString().padStart(2, '0')}

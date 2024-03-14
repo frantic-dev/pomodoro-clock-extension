@@ -21,6 +21,7 @@ $option-8: linear-gradient(to top, #48f1d0 0%, #94922e 100%);
 * {
   padding: 0;
   margin: 0;
+  user-select: none;
 }
 
 html,
@@ -37,7 +38,8 @@ body {
 }
 
 .clock,
-.stopwatch-time {
+.stopwatch-timer,
+.countdown-timer {
   font-size: clamp(20px, 20vw, 80px);
   text-align: center;
   color: white;
@@ -128,7 +130,7 @@ body {
 .option-8 {
   background-image: $option-8;
 }
-#hide-bgs-grid, .stopwatch-button {
+#hide-bgs-grid-button, .stopwatch-button, .countdown-button {
   display: block;
   margin: auto;
   padding: 5px 20px;
@@ -171,6 +173,6 @@ body {
     }
   }
 }
-.stopwatch-buttons {
+.stopwatch-buttons, .countdown-buttons {
   display: flex;
 }
